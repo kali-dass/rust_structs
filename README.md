@@ -1,1 +1,1 @@
-# Rust strcture basics
+# Rust structs basics
