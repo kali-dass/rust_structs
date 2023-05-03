@@ -73,6 +73,9 @@ fn main() {
     // pritty print as well
     println!("The rect is {:?} or {:#?}", rect1, rect1);
 
+    // dbg macro
+    dbg!(&rect1);
+
 }
 
 fn build_user(email: String, username: String) -> User {
