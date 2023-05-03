@@ -4,6 +4,10 @@ struct User {
     email: String,
     sign_in_count: u64
 }
+
+//struct of tuple type
+struct Color(i32,i32,i32);
+
 fn main() {
     // create struct instance
     let user1 = User{
@@ -40,6 +44,9 @@ fn main() {
         email: String::from("123@example.com"),
         ..user2
     };
+
+    // struct tuple type
+    let black = Color(0,0,0);
 
 }
 
