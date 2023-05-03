@@ -76,6 +76,9 @@ fn main() {
     // dbg macro
     dbg!(&rect1);
 
+    // method
+    println!("The area of the rectangle is {} square pixels", rect1.myarea());
+
 }
 
 fn build_user(email: String, username: String) -> User {
@@ -89,4 +92,11 @@ fn build_user(email: String, username: String) -> User {
 // pass strcut and calculate area
 fn area(rectangle: &Rectangle) -> u32 {
     rectangle.width * rectangle.height
+}
+
+// method
+impl Rectangle{
+    fn myarea(&self) -> u32 {
+        self.width * self.height
+    }
 }
