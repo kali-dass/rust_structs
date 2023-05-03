@@ -8,6 +8,9 @@ struct User {
 //struct of tuple type
 struct Color(i32,i32,i32);
 
+//unit struct
+struct AlwaysEqual;
+
 fn main() {
     // create struct instance
     let user1 = User{
@@ -47,6 +50,9 @@ fn main() {
 
     // struct tuple type
     let black = Color(0,0,0);
+
+    // unit like struct
+    let subject = AlwaysEqual;
 
 }
 
