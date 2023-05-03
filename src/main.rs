@@ -11,6 +11,12 @@ struct Color(i32,i32,i32);
 //unit struct
 struct AlwaysEqual;
 
+// struct rectangle
+struct Rectangle {
+    width: u32,
+    height: u32
+}
+
 fn main() {
     // create struct instance
     let user1 = User{
@@ -54,6 +60,14 @@ fn main() {
     // unit like struct
     let subject = AlwaysEqual;
 
+    let rect1 = Rectangle{
+        width: 30,
+        height: 80
+    };
+
+    // pass ref
+    println!("The area of the rectangle is {} square pixels", area(&rect1));
+
 }
 
 fn build_user(email: String, username: String) -> User {
@@ -62,4 +76,9 @@ fn build_user(email: String, username: String) -> User {
         username, 
         email, 
         sign_in_count: 1 }
+}
+
+// pass strcut and calculate area
+fn area(rectangle: &Rectangle) -> u32 {
+    rectangle.width * rectangle.height
 }
